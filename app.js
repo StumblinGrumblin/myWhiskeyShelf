@@ -11,17 +11,36 @@ var path = require('path');
 
 // //Database: Mongoose
 // var mongoose = require('mongoose');
-// mongoose.connect('mongodb://localhost/test');
-// var db = mongoose.connection;
-// db.on('error', console.error.bind(console, 'connection error:'));
-// db.once('open', function callback () {
-// 	var whiskeySchema = mongoose.Schema({
-// 		name: String
-// 	})
-// 	var Whiskey = mongoose.model('Whiskey', whiskeySchema)
 
-// 	var laphroaig_10 = new Whiskey({ name: "Laphroaig 10 Yr"})
-// 	console.log(laphroaig_10.name)
+// var Schema = mongoose.Schema
+// var ObjectId = Schema.ObjectId
+
+// //SCHEMAS
+// var DistillerySchema = new Schema({
+// 	name : String,
+// 	address : String,
+// 	phone : String,
+// 	email : String,
+// 	owner : String
+// });
+// var WhiskeySchema = new Schema({
+// 	id : ObjectId,
+// 	name : String,
+// 	region : String,
+// 	distillery : String,
+// 	image : String,
+// 	reviews: [{ reviewer : String, score: Number}],
+// 	status : String,
+// 	purchasePrice : Number
+// });
+
+// var Distillery = mongoose.model('Distillery', DistillerySchema);
+// var Whiskey = mongoose.model('Whiskey', WhiskeySchema);
+
+// mongoose.connect('mongodb://localhost:27017/whiskeyTest', function(err){
+// 	if(err) {
+// 		console.log('Could not connect to Mongo');
+// 	}
 // });
 
 var app = express();
