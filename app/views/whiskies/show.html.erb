@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @whisky.name %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @whisky.region %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @whisky.color %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @whisky.body %>
+</p>
+
+<p>
+  <strong>Nose:</strong>
+  <%= @whisky.nose %>
+</p>
+
+<p>
+  <strong>Palatte:</strong>
+  <%= @whisky.palatte %>
+</p>
+
+<p>
+  <strong>Finish:</strong>
+  <%= @whisky.finish %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @whisky.notes %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @whisky.image_url %>
+</p>
+
+<p>
+  <strong>Point of sale:</strong>
+  <%= @whisky.point_of_sale %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @whisky.price %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @whisky.size %>
+</p>
+
+<p>
+  <strong>Abv:</strong>
+  <%= @whisky.abv %>
+</p>
+
+<%= link_to 'Edit', edit_whisky_path(@whisky) %> |
+<%= link_to 'Back', whiskies_path %>

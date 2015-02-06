@@ -1,0 +1,49 @@
+<h1>Listing whiskies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Region</th>
+      <th>Color</th>
+      <th>Body</th>
+      <th>Nose</th>
+      <th>Palatte</th>
+      <th>Finish</th>
+      <th>Notes</th>
+      <th>Image url</th>
+      <th>Point of sale</th>
+      <th>Price</th>
+      <th>Size</th>
+      <th>Abv</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @whiskies.each do |whisky| %>
+      <tr>
+        <td><%= whisky.name %></td>
+        <td><%= whisky.region %></td>
+        <td><%= whisky.color %></td>
+        <td><%= whisky.body %></td>
+        <td><%= whisky.nose %></td>
+        <td><%= whisky.palatte %></td>
+        <td><%= whisky.finish %></td>
+        <td><%= whisky.notes %></td>
+        <td><%= whisky.image_url %></td>
+        <td><%= whisky.point_of_sale %></td>
+        <td><%= whisky.price %></td>
+        <td><%= whisky.size %></td>
+        <td><%= whisky.abv %></td>
+        <td><%= link_to 'Show', whisky %></td>
+        <td><%= link_to 'Edit', edit_whisky_path(whisky) %></td>
+        <td><%= link_to 'Destroy', whisky, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Whisky', new_whisky_path %>
