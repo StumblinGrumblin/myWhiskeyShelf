@@ -1,49 +1,32 @@
-<h1>Listing whiskies</h1>
+<h1>My Whiskies</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Region</th>
-      <th>Color</th>
-      <th>Body</th>
-      <th>Nose</th>
-      <th>Palatte</th>
-      <th>Finish</th>
-      <th>Notes</th>
-      <th>Image url</th>
-      <th>Point of sale</th>
-      <th>Price</th>
-      <th>Size</th>
-      <th>Abv</th>
-      <th colspan="3"></th>
+  <% @whiskies.each do |whisky| %>
+    <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+      <td>
+        <%= image_tag(whisky.image_url, class: 'list_image') %>
+      </td>
+      <td class="list_notes">
+      <dl>
+        <dt><strong><%= whisky.name %></strong></dt>
+        <dd>Region: <%= truncate(strip_tags(whisky.region)) %></dd>
+        <dd>Color: <%= truncate(strip_tags(whisky.color), length: 140) %></dd>
+        <dd>Body: <%= truncate(strip_tags(whisky.body), length: 140) %></dd>
+        <dd>Nose: <%= truncate(strip_tags(whisky.nose), length: 140) %></dd>
+        <dd>Palatte: <%= truncate(strip_tags(whisky.palatte), length: 140) %></dd>
+        <dd>Notes: <%= truncate(strip_tags(whisky.notes), length: 140) %></dd>
+        <dd>Point of Sale: <%= truncate(strip_tags(whisky.point_of_sale), length: 140) %></dd>
+        <dd>Price: $<%= whisky.price %></dd>
+        <dd>Size: <%= whisky.size %>ml</dd>
+        <dd>ABV: <%= whisky.abv %>%</dd>
+      </dl>
+      </td>
+      <td class="list_actions">
+        <%= link_to 'Show', whisky %><br />
+        <%= link_to 'Edit', edit_whisky_path(whisky) %><br />
+        <%= link_to 'Destroy', whisky, method: :delete, data: { confirm: 'Are you sure?'} %>
+      </td>
     </tr>
-  </thead>
-
-  <tbody>
-    <% @whiskies.each do |whisky| %>
-      <tr>
-        <td><%= whisky.name %></td>
-        <td><%= whisky.region %></td>
-        <td><%= whisky.color %></td>
-        <td><%= whisky.body %></td>
-        <td><%= whisky.nose %></td>
-        <td><%= whisky.palatte %></td>
-        <td><%= whisky.finish %></td>
-        <td><%= whisky.notes %></td>
-        <td><%= whisky.image_url %></td>
-        <td><%= whisky.point_of_sale %></td>
-        <td><%= whisky.price %></td>
-        <td><%= whisky.size %></td>
-        <td><%= whisky.abv %></td>
-        <td><%= link_to 'Show', whisky %></td>
-        <td><%= link_to 'Edit', edit_whisky_path(whisky) %></td>
-        <td><%= link_to 'Destroy', whisky, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
     <% end %>
-  </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Whisky', new_whisky_path %>
+<br />

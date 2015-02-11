@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150206202126) do
+ActiveRecord::Schema.define(version: 20150209224204) do
 
   create_table "whiskies", force: true do |t|
     t.string   "name"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20150206202126) do
     t.decimal  "abv",           precision: 2, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "score"
   end
 
 end

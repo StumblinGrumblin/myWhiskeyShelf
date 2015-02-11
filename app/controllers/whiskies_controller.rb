@@ -69,6 +69,6 @@ class WhiskiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def whisky_params
-      params.require(:whisky).permit(:name, :region, :color, :body, :nose, :palatte, :finish, :notes, :image_url, :point_of_sale, :price, :size, :abv)
+      params.require(:whisky).permit(:name, :score, :region, :color, :body, :nose, :palatte, :finish, :notes, :image_url, :point_of_sale, :price, :size, :abv)
     end
 end
