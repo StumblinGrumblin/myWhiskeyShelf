@@ -5,12 +5,13 @@
 <div class="container">
   <div class="row">
   <% @whiskies.each do |whisky| %>
-    <div class="col-xs-6 col-md-3">
-      <a href="#" class="thumbnail">
+    <div class="col-xs-3 col-md-2">
+      <%= link_to whisky_path(whisky), {class: "thumbnail"} do %>
         <%= image_tag(whisky.image_url) %>
         <%= whisky.score %>
+      <%- end %>
       </a>
-      <h3><%= whisky.name %></h3>
+      <strong><%= whisky.name %></strong>
     </div>
   <% end %>
   </div>
