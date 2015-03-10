@@ -1,18 +1,12 @@
-<h1>My Whiskies</h1>
-
-<button type="button" class="btn btn-default new"><%= link_to 'New', new_path %></button>
-
-<div class="container">
-  <div class="row">
-  <% @whiskies.each do |whisky| %>
-    <div class="col-xs-3 col-md-2">
-      <%= link_to whisky_path(whisky), {class: "thumbnail"} do %>
-        <%= image_tag(whisky.image_url) %>
-        <%= whisky.score %>
-      <%- end %>
-      </a>
-      <strong><%= whisky.name %></strong>
-    </div>
-  <% end %>
+<% @whiskies.each do |whisky| %>
+  <div class="col-xs-3 col-md-2">
+    <%= link_to whisky_path(whisky), {class: "thumbnail"} do %>
+      <%= image_tag(whisky.image_url) %>
+      <%= whisky.score %>
+    <%- end %>
+    </a>
+    <strong><%= whisky.name %></strong>
   </div>
-</div>
+<% end %>
+
+<%= link_to '+', new_path, class: "btn-new" %>

@@ -7,8 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body class='<% controller.controller_name %>'>
+  <nav id="header">
+    <div class="container">
+      <div class="row">
+        <div class="left">
+          <h1>myWhiskyShelf</h1>
+        </div>
+<!--         <div class="right">
+  <ul class="main-navigation clearfix">
+    <li class="main-navigation-item"><a href="#">HOME</a></li>
+    <li class="main-navigation-item"><a href="#">UNO</a></li>
+    <li class="main-navigation-item"><a href="#">DOS</a></li>
+    <li class="main-navigation-item"><a href="#">TRES</a></li>
+  </ul>
+</div> -->
+      </div>
+    </div>
+  </nav>
 
-<%= yield %>
-
+  <div id="main" class="container">
+    <div class="row">
+      <%= yield %>
+    </div>
+  </div>
 </body>
 </html>

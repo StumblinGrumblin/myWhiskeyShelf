@@ -1,21 +1,74 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "_material";
 
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
+$blue-grey: #607d8b;
+$whisky-tawny: #795548;
+$whisky-caramel: #783412;
+$deep-orange: #ff5722;
+$material-red: #f44336;
 
-@mixin box_sizing {
-  -moz-box-sizing:      border-box;
-  -webkit-box-sizing:   border-box;
-  box-sizing:           border-box;
+
+body {
+  background: $gray-medium-light;
 }
 
-/* universal */
+#header {
+  background: $blue-grey;
 
-button.new {
-  margin-left: 20px;
+  .left {
+    margin-top: 14px;
+    color: white;
+  }
+
+  .main-navigation {
+    background-color: $whisky-tawny;
+    padding: 0;
+
+    .main-navigation-item {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: $whisky-tawny;
+      :hover {
+        background-color: $whisky-caramel;
+      }
+      a {
+        color: #ffffff;
+        line-height: 47px;
+        padding: 12px 22px;
+        text-decoration: none;
+        background: transparent;
+        :hover {
+          background-color: transparent;
+
+        }
+      }
+    }
+  }
 }
+
+
+#main {
+  margin-top: 30px;
+}
+
+/* BUTTONS*/
+a.btn-new {
+  @include btn();
+  background-color: $blue-grey;
+  bottom: 30px;
+  font-size: 30px;
+  right: 30px;
+  position: fixed;
+
+}
+
+
 
 /* forms */
 
@@ -23,7 +76,6 @@ input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
-  @include box_sizing;
 }
 
 input {
@@ -57,4 +109,38 @@ input {
 #session_remember_me {
   width: auto;
   margin-left: 0;
+}
+
+/* SHOW PAGE */
+
+
+#display-card  {
+  background: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px 0px, rgba(0, 0, 0, 0.117647) 0px 1px 6px 0px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  .title p {
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  .btn-danger {
+    color: white;
+  }
+  #vital-info {
+    margin-left:20px;
+    margin-right: 20px;
+    margin-top: 20px;;
+    img {
+      float: left;
+    }
+  }
+  #tasting-info  {
+    margin: 20px;
+  }
+  #purchase-info {
+    margin: 0 20px;
+  }
+
+
 }
