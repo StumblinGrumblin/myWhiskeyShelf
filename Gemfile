@@ -14,7 +14,7 @@ gem 'uglifier', '2.5.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
-
+gem 'bootstrap-material-design', '~> 0.1.7'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'sass', '3.2.19'
@@ -39,4 +39,3 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
