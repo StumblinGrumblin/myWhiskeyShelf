@@ -46,6 +46,10 @@
       <%= f.text_field :notes %>
     </div>
     <div class="field">
+      <%= f.label :score %><br>
+      <%= f.number_field :score, max: 100 %>
+    </div>
+    <div class="field">
       <%= f.label :image_url %><br>
       <%= f.text_field :image_url %>
     </div>
@@ -63,7 +67,7 @@
     </div>
     <div class="field">
       <%= f.label :abv %><br>
-      <%= f.text_field :abv %>
+      <%= f.number_field :abv, max: 150 %>
     </div>
     <div class="actions">
       <%= f.submit %>
