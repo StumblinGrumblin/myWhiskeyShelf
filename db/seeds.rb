@@ -68,3 +68,18 @@ Whisky.create!(name: 'Lagavulin 16',
     price: 68.99,
     size: 750,
     abv: 43)
+
+Whisky.create!(name: 'Balvenie Portwood 21',
+  score: 92,
+  region: 'Speyside',
+  color: 'Dark Copper',
+  body: 'Medium thick, lots of slow legs',
+  nose: 'Faint maple, dark chocolate',
+  palatte: 'Sweet, blackberry, honey',
+  finish: 'Long smooth finish',
+  notes: 'Delicious, a bit expensive for what you get.',
+    image_url: 'default.jpg',
+    point_of_sale: 'Total Wines',
+    price: 150.99,
+    size: 750,
+    abv: 47)

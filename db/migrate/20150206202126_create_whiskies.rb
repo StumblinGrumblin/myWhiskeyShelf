@@ -11,9 +11,9 @@ class CreateWhiskies < ActiveRecord::Migration
       t.string :notes
       t.string :image_url
       t.string :point_of_sale
-      t.decimal :price, precision: 6, scale: 2
-      t.integer :size, precision: 3
-      t.decimal :abv, precision: 2, scale: 2
+      t.decimal :price,
+      t.integer :size,
+      t.decimal :abv,
 
       t.timestamps
     end
