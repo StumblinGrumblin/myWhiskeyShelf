@@ -118,29 +118,47 @@ input {
   background: white;
   -webkit-box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px 0px, rgba(0, 0, 0, 0.117647) 0px 1px 6px 0px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  .title p {
-    font-size: 15px;
-    font-weight: bold;
-    padding-top: 10px;
-    padding-left: 10px;
+  margin-bottom: 30px;
+  padding: 0;
+  .row {
+    margin: 0;
+  }
+  h1 {
+  margin: 10px 20px;
   }
   .btn-danger {
     color: white;
   }
-  #vital-info {
-    margin-left:20px;
-    margin-right: 20px;
-    margin-top: 20px;;
+  .heading {
+    background: $blue-grey;
+    color: white;
+  }
+  h3, h4 {
+    border-bottom: 1px solid black;
+  }
+
+  #static-info {
+    margin: 0 20px;
     img {
-      float: left;
+      margin-top: 10px;
     }
+    .bottle-info {
+      margin-top: 97px;
+      p {
+        margin: 0;
+      }
+    }
+
   }
   #tasting-info  {
-    margin: 20px;
+    margin: 0 20px;
+
   }
   #purchase-info {
     margin: 0 20px;
   }
 
-
+  i {
+    font-size: 14px;
+  }
 }
